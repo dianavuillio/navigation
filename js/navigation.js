@@ -1,9 +1,9 @@
 // add the select form drop down item
 $('#menu').append(
-  '<select id="s1"></select>'+
-  '<select id="s2"></select>'+
-  '<select id="s3"></select>'+
-  '<select id="s4"></select>'
+  // '<select id="select-1"></select>'+
+  // '<select id="select-2"></select>'+
+  // '<select id="select-3"></select>'+
+  '<select id="select-4"></select>'
 );
 
 // fill the drop down menu with the menu options
@@ -34,6 +34,11 @@ $option.val()
 
 // indicate which navigation item we are currently looking at
 $('#menu a').click(function() {
+  var $anchor = $(this);
+  console.info(
+    'Habeis dado click sobre la opción' +
+    $anchor.text()
+  );
   $('#menu li').removeClass("selected");
   $(this).parent().addClass("selected");
 });
